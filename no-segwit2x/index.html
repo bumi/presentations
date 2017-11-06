@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NO Segwit2x</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3, h4 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content.image img { width: 100%; }
+      .red { color: red; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# (NO) Segwit2x
+### what is Segwit2x, what happens and why I (and you) reject it
+
+
+---
+class: center, middle, image
+
+# Bitcoin
+
+![Bitcoin transaction](bitcoin-flow.jpg)
+
+???
+Bitcoin transaction: 
+- who has made a bitcoin transaction? 
+- which wallet did you use? 
+
+Flow:
+- user wallet ideally a full node
+- transaction is signed, sent to the bitcoin network 
+- miners validate the transactions and mine blocks  
+= often people think that's why miners are in control of which transactions go into blockchain  
+= which transactions are valid and what the rules of the network are  
+=> partly true  
+- Bitcoin network
+- wallets
+=> and the wallets in the end again validate the transaction and the blocks
+=> miners must produce valid blocks
+
+
+lines => points of validation
+
+=> Ecosystem 
+- Bitcoin network
+
+
+---
+class: center, middle, image, red
+
+# Segwit2x
+
+## Change in the consensus algorithm 
+## (Hard fork: 1MB -> 2MB)
+## Planned to happen on November 16th
+
+
+
+???
+NYC Agreement - von minern unterschrieben im Juni:  
+- Plan Segwit im August zu aktivieren und im November die blocksize zu erhöhen  
+- Kein community support / kein core developer  
+
+Change in the consensus algorithm. Not backwards compatible   
+
+Hard fork:   
+if not all join and update their software then a chain split happens  
+Greatest risk  
+
+
+---
+class: center, middle, image
+
+# Segwit2x
+
+![Segwit2x fork](fork.jpg)
+
+
+???
+No replay protection!
+
+
+---
+class: center, middle
+
+# Segwit2x
+
+## No big enough community support
+## Critical change in the protocol
+## Too rushed, not well planned and implemented
+
+---
+class: center, middle
+
+## Questions?
+
+### Contact
+
+Michael Bumann
+
+hello@michaelbumann.com
+
+@bumi on most of the interwebs  
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
