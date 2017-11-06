@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICOs - technical aspects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3, h4 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# ICOs - technical aspects
+### FinTech and InsurTech Meetup Cologne
+
+
+---
+class: center, middle
+
+# Disclaimer
+I am very critical (and you should be, too!)
+
+---
+class: center, middle
+
+# BUT
+## That stuff is changing the world!
+
+---
+class: center, middle
+
+# A little bit of history
+
+---
+class: center, middle
+
+# Bitcoin
+↓
+# Colored Coins
+↓
+# Ethereum
+
+
+---
+class: center, middle
+
+# Ethereum
+### Smart Contract platform
+#### stateful, immutable, autonomous scripts on a decentralized network
+
+---
+class: center, middle
+
+# What to do with that?
+
+---
+class: center, middle
+
+## stateful, immutable, autonomous, decentralized
+
+
+---
+class: center, middle
+
+# You can build:
+## A tradeable token with a fixed supply
+
+(ethereum.org)
+
+
+
+---
+
+# Token Source Code 
+### The hello world program of Ethereum
+
+
+```javascript
+contract MyToken {
+    /* This creates an array with all balances */
+    mapping (address => uint256) public balanceOf;
+
+    /* Initializes contract with initial supply tokens to the creator of the contract */
+    function MyToken(uint256 initialSupply) {
+        balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens
+    }
+
+    /* Send coins */
+    function transfer(address _to, uint256 _value) {
+        require(balanceOf[msg.sender] >= _value);           // Check if the sender has enough
+        require(balanceOf[_to] + _value >= balanceOf[_to]); // Check for overflows
+        balanceOf[msg.sender] -= _value;                    // Subtract from the sender
+        balanceOf[_to] += _value;                           // Add the same to the recipient
+    }
+}
+```
+
+---
+# What is a token?
+
+```javascript
+// ...
+
+mapping (address => uint256) public balanceOf;
+
+// ...
+```
+
+* mostly a number associated with an Ethereum account
+* managed by a Smart Contract
+
+
+```javascript
+
+function buy() public payable {
+  require(msg.value > 1 ether);
+  uint256 tokens = msg.value * exchangeRate;
+    
+  balances[msg.sender] = balances[msg.sender] + tokens;
+}
+
+function transfer(uint _amount, address recipient) public {
+  require(balances[msg.sender] >= _amount);
+  balances[msg.sender] = balances[msg.sender] - amount;
+  balances[recipient] = balances[recipient] + amount;
+}
+```
+---
+class: center, middle
+
+# What is a token?
+
+### mostly a number associated with an Ethereum account
+### managed by a *standardized* Smart Contract (ERC20)
+### represents something  / allows the owner to do something
+
+
+---
+class: center, middle
+
+Tokens sound boring, let's call it 
+# ICO
+## Initial Coin Offering
+
+---
+class: center, middle
+
+# theDAO
+# Basic Attention Token
+# Aragon
+# SingularDTV
+# Tezos
+
+---
+class: center, middle
+
+# Due diligence?!
+## No legal fu - more code
+## Read the source code!
+
+---
+class: center, middle
+
+# Legal?!
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
