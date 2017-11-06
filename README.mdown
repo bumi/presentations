@@ -7,3 +7,10 @@ Base URL: https://bumi.github.io/presentations
 ### List 
 
 * [ICOs technical background - Fintech meetup CGN 2.11.17](https://bumi.github.io/presentations/icos-technical-background)
+
+
+=== Usage
+
+* Open the presentation
+* Press "C" to clone the view and create a newly synced window
+* Press "P" on one of the windows for the Presenter mode
