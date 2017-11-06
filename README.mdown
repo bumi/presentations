@@ -1,9 +1,9 @@
-== Presentations
+## Presentations
 
 
 Base URL: https://bumi.github.io/presentations
 
 
-=== List 
+### List 
 
 * [ICOs technical background - Fintech meetup CGN 2.11.17](https://bumi.github.io/presentations/icos-technical-background)
